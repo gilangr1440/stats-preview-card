@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [solution URL here](https://your-solution-url.com)
-- Live Site URL: [live site URL here](https://your-live-site-url.com)
+- Solution URL: [solution URL here](https://www.frontendmentor.io/solutions/stats-preview-card-component-ngOVMgRFtm)
+- Live Site URL: [live site URL here](https://gilangr1440.github.io/stats-preview-card/)
 
 ## My process
 

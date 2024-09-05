@@ -130,6 +130,7 @@ body {
   .card .card-body .card-desc {
     text-align: start;
     margin-bottom: 68px;
+    font-weight: 400;
   }
   .card .card-body .card-stat {
     flex-direction: row;
@@ -140,6 +141,7 @@ body {
   }
   .card .card-body .card-stat .stat-list .stat-title {
     text-align: start;
+    font-weight: 400;
   }
   .card .image-container {
     display: block;
