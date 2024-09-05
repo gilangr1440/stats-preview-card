@@ -1,0 +1,245 @@
+$very-dark-blue: hsl(233, 47%, 7%);
+$dark-desaturate-blue: hsl(244, 38%, 16%);
+$soft-violet: hsl(277, 64%, 61%);
+
+$white: hsl(0, 0%, 100%);
+$main-paragraphs: hsla(0, 0%, 100%, 0.75);
+$stat-headings: hsla(0, 0%, 100%, 0.6);
+
+$inter: "Inter", sans-serif;
+$lexend-deca: "Lexend Deca", sans-serif;
+
+body {
+  background-color: $very-dark-blue;
+  width: 100%;
+  height: 120vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 310px;
+  background-color: $dark-desaturate-blue;
+  border-radius: 10px;
+  box-sizing: border-box;
+
+  & .header-container {
+    width: 100%;
+    position: relative;
+    border-radius: 10px 10px 0 0;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: darken($color: hsla(277, 48%, 50%, 0.537), $amount: 10%);
+      border-radius: 10px 10px 0 0;
+    }
+
+    & .image-header {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+    }
+  }
+
+  & .card-body {
+    padding: 30px;
+
+    & .card-title {
+      text-align: center;
+      font-family: $inter;
+      font-weight: 700;
+      font-size: 25px;
+      color: $white;
+      line-height: 30px;
+      margin: 0 auto 17px;
+
+      & span {
+        color: $soft-violet;
+      }
+    }
+
+    & .card-desc {
+      text-align: center;
+      font-family: $inter;
+      font-weight: 200;
+      font-size: 15px;
+      color: $main-paragraphs;
+      line-height: 22px;
+      margin: 0 auto 32px;
+    }
+
+    & .card-stat {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+
+      & .stat-list {
+        width: 100%;
+
+        & .stat-number {
+          text-align: center;
+          font-family: $inter;
+          font-weight: 600;
+          font-size: 22px;
+          color: $white;
+          margin-bottom: 10px;
+        }
+
+        & .stat-title {
+          text-align: center;
+          font-family: $lexend-deca;
+          font-weight: 200;
+          font-size: 12px;
+          color: $main-paragraphs;
+        }
+      }
+    }
+  }
+
+  & .image-container {
+    display: none;
+  }
+}
+
+.attribution {
+  font-family: $lexend-deca;
+  color: $white;
+
+  & a {
+    text-decoration: none;
+  }
+}
+
+@media only screen and (max-width: 374px) {
+  .card {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    height: 100vh;
+  }
+
+  .card {
+    flex-direction: row;
+    width: 80%;
+
+    & .header-container {
+      display: none;
+    }
+
+    & .card-body {
+      width: 52%;
+      box-sizing: border-box;
+      padding: 30px;
+
+      & .card-title {
+        font-size: 37px;
+        text-align: start;
+        line-height: 45px;
+        margin-bottom: 26px;
+      }
+
+      & .card-desc {
+        text-align: start;
+        margin-bottom: 68px;
+      }
+
+      & .card-stat {
+        flex-direction: row;
+        gap: 30px;
+
+        & .stat-list {
+          & .stat-number {
+            text-align: start;
+          }
+
+          & .stat-title {
+            text-align: start;
+          }
+        }
+      }
+    }
+
+    & .image-container {
+      display: block;
+      width: 48%;
+      position: relative;
+      border-radius: 0 10px 10px 0;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: darken($color: hsla(277, 48%, 50%, 0.537), $amount: 10%);
+        border-radius: inherit;
+      }
+
+      & .desktop-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: inherit;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .card {
+    width: 75%;
+
+    & .card-body {
+      padding: 70px 100px 50px 90px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1441px) {
+  .card {
+    width: 75%;
+
+    & .card-body {
+      padding: 70px;
+
+      & .card-title {
+        font-size: 46px;
+      }
+
+      & .card-desc {
+        font-size: 24px;
+        line-height: 30px;
+      }
+
+      & .card-stat {
+        & .stat-list {
+          & .stat-number {
+            font-size: 30px;
+          }
+
+          & .stat-title {
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
+}
